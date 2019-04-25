@@ -21,9 +21,6 @@
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Ultra|Merriweather" rel="stylesheet">
 
-        <!-- Parallax.js -->
-        <!-- <script src="js/parallaxjs/parallax.min.js" charset="utf-8"></script> -->
-
         <!-- ScrollMagic -->
         <script src="js/scrollmagic/ScrollMagic.min.js" charset="utf-8"></script>
         <script src="js/scrollmagic/jquery.ScrollMagic.min.js" charset="utf-8"></script>
@@ -44,7 +41,7 @@
         <nav class="navbar navbar-expand-md navbar-principal navbar-dark bg-dark fixed-top page-top" id="navbar">
             <div class="titulo-contenedor mx-auto order-0">
                 <div class="padding-navbar-toggler"></div>
-                <a class="navbar-brand mx-auto" id="titulo" href="#">Tolman</a>
+                <a class="navbar-brand mx-auto marca" href="#">Tolman</a>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target=".dual-collapse2">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -56,13 +53,13 @@
                         <a class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#">Producto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#">Planes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#">Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -73,36 +70,175 @@
                     <img id="clock" style="top: 150px;" src="media/clock.png" alt="">
                     <div class="container" id="marketing-slogan">
                         <h1 id="startchange">Más alla del espacio<br>y el tiempo</h1>
-                        <p>Bootstrap is the most popular HTML, CSS...</p>
+                        <p>Tolman entrega cada mes más de <strong>dos millones</strong> de mensajes a tiempos pasados para sus clientes.</p>
                     </div>
                 </div>
             </section>
-            <section id="content">
+            <section class="content" id="features">
                 <div class="container featureshow">
                     <div class="row featureshow-row">
-                        <div class="col-md-4 col-sm-6 featureshow-item">
-                            <img src="media/clock.png" class="featureshow-image" alt="">
-                            <p class="lead featureshow-title">The poyo</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class="col-sm-4 featureshow-item">
+                            <img src="media/icon_delorean.png" class="featureshow-image" alt="">
+                            <p class="lead featureshow-title">Estado del arte</p>
+                            <p>
+                                Nuestra plataforma tecnológica, pionera en el mundo, permite el envío de contenido al pasado,
+                                tanto de forma manual como a través de interfaces programáticas.
+                            </p>
                         </div>
-                        <div class="col-md-4 col-sm-6 featureshow-item">
-                            <img src="media/clock.png" class="featureshow-image" alt="">
-                            <p class="lead featureshow-title">The poyo 2</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class="col-sm-4 featureshow-item">
+                            <img src="media/icon_paperplane.svg" class="featureshow-image" alt="">
+                            <p class="lead featureshow-title">Rapidez</p>
+                            <p>
+                                Con nuestra tecnología, hemos conseguido reducir el tiempo de recepción por mensaje a
+                                <strong>dos días</strong> de media; el tiempo más bajo de la industria.
+                            </p>
                         </div>
-                        <div class="col-md-4 col-sm-6 featureshow-item">
-                            <img src="media/clock.png" class="featureshow-image" alt="">
-                            <p class="lead featureshow-title">The poyo 3</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class="col-sm-4 featureshow-item">
+                            <img src="media/icon_shield_clock.png" class="featureshow-image" alt="">
+                            <p class="lead featureshow-title">Seguridad</p>
+                            <p>
+                                Todos los mensajes son revisados por nuestro equipo de más de 6000 expertos con total
+                                confidencialidad, previniendo la posibilidad de fallos temporales.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="container" id="rendimiento">
+                    <h1 class="display-4 titulo-seccion">El mayor rendimiento</h1>
+                    <div class="row">
+                        <div id="carouselExampleIndicators" class="carousel slide col-md-6" data-ride="carousel"
+                            data-interval="8000">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <figcaption class="grafica-descripcion">
+                                        Volumen de envíos con éxito al mes.
+                                    </figcaption>
+                                    <figure class="grafica">
+                                        <div class="grafica-ejes">
+                                            <div class="grafica-eje">
+                                                <p>Competencia</p>
+                                            </div>
+                                            <div class="grafica-eje">
+                                                <p class="marca">Tolman</p>
+                                            </div>
+                                        </div>
+                                        <div class="graficas-main">
+                                            <div class="graficas-barra-container">
+                                                <span class="graficas-barra" style="width: 5%"></span>
+                                                <span class="graficas-porcentaje">&lt;0%</span>
+                                            </div>
+                                            <div class="graficas-barra-container">
+                                                <span class="graficas-barra destacada" style="width: 80%"></span>
+                                                <span class="graficas-porcentaje">100%</span>
+                                            </div>
+                                        </div>
+                                    </figure>
+                                </div>
+                                <div class="carousel-item">
+                                    <figcaption class="grafica-descripcion">
+                                        Porcentaje de éxito de los envíos.
+                                    </figcaption>
+                                    <figure class="grafica">
+                                        <div class="grafica-ejes">
+                                            <div class="grafica-eje">
+                                                <p>Competencia</p>
+                                            </div>
+                                            <div class="grafica-eje">
+                                                <p class="marca">Tolman</p>
+                                            </div>
+                                        </div>
+                                        <div class="graficas-main">
+                                            <div class="graficas-barra-container">
+                                                <span class="graficas-barra" style="width: 5%"></span>
+                                                <span class="graficas-porcentaje">0.4%</span>
+                                            </div>
+                                            <div class="graficas-barra-container">
+                                                <span class="graficas-barra destacada" style="width: 78%"></span>
+                                                <span class="graficas-porcentaje">98%</span>
+                                            </div>
+                                        </div>
+                                    </figure>
+                                </div>
+                                <div class="carousel-item">
+                                    <figcaption class="grafica-descripcion">
+                                        Paradojas temporales causadas.
+                                    </figcaption>
+                                    <figure class="grafica">
+                                        <div class="grafica-ejes">
+                                            <div class="grafica-eje">
+                                                <p>Doctor Who</p>
+                                            </div>
+                                            <div class="grafica-eje">
+                                                <p>Otros</p>
+                                            </div>
+                                            <div class="grafica-eje">
+                                                <p class="marca">Tolman</p>
+                                            </div>
+                                        </div>
+                                        <div class="graficas-main">
+                                            <div class="graficas-barra-container">
+                                                <span class="graficas-barra" style="width: 25%"></span>
+                                                <span class="graficas-porcentaje">20+</span>
+                                            </div>
+                                            <div class="graficas-barra-container">
+                                                <span class="graficas-barra" style="width: 80%"></span>
+                                                <span class="graficas-porcentaje">100+</span>
+                                            </div>
+                                            <div class="graficas-barra-container">
+                                                <span class="graficas-barra destacada" style="width: 5%"></span>
+                                                <span class="graficas-porcentaje">0</span>
+                                            </div>
+                                        </div>
+                                    </figure>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                        <div class="col-md-6 descripcion">
+                            <p class="lead">
+                                Tolman cuenta con los volúmenes más altos de envio de mensajes
+                                registrados en la industria, con más de <b>60000</b> mensajes
+                                enviados al día.
+                            </p>
+                            <p class="lead">
+                                Así, somos capaces de garantizar una llegada en tiempo razonable,
+                                a una escala muy superior que la de la competencia.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="container">
+                    <div class="row infoextra">
+                        <div class="col-md-6">
+                            <p class="display-4 infoextra-cabecera">Lee más sobre <a href="#">nuestro producto</a>.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="display-4 infoextra-cabecera">¿Convencido? Mira <a href="#">nuestros planes</a>.</p>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
         <footer>
-            <div class="container">
+            <div class="container copyright">
                 <div class="row">
-                    <p>Copyright (c) 2019 Tolman Incorporated - All Rights Reserved</p>
+                    <p>Copyright (c) 2019 Tolman Incorporated - Todos los derechos reservados</p>
                 </div>
             </div>
         </footer>
