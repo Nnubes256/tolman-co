@@ -428,6 +428,45 @@ footer > div.container > div.row > p {
     margin: 0 5px 0 -15px;
 }
 
+.infraes {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.infraes-usuario, .infraes-servidor, .infraes-hawking {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.infraes-linea {
+  width: 2.5em;
+  height: 12px;
+  align-self: center;
+  /*! border-radius: 1000%; */
+  /*! background-color: #fff7ef; */
+  width: calc(100% / 5 - 50px);
+}
+
+.infraes-linea-inner {
+    width: 100%;
+    height: 100%;
+    background: #fff7ef;
+    border-radius: 1000px;
+}
+
+.infraes-logo {
+    font-size: 600%;
+}
+
+@media (max-width: 575px) {
+    .infraes-logo {
+        font-size: 400%;
+    }
+}
+
 .planes .planes-tier > .card-body {
     padding-top: 1.25rem;
     padding-left: 0;
