@@ -1,3 +1,6 @@
+/*eslint-disable no-extra-parens */
+/*eslint-env jquery */
+/*globals ScrollMagic TimelineMax TweenMax Linear*/
 (function() {
     'use strict';
 
@@ -38,7 +41,7 @@
         }
     }
 
-    function updateTweenAtIndex(index, newData) {
+    function updateTweenAtIndex(newData) {
         var subTween = tween.getChildren()[0];
 
         subTween.progress(0);
@@ -61,11 +64,11 @@
             } else {
                 $('.navbar').addClass('page-top');
             }
-        }
+        };
     }
 
     function handleParallaxCentering(newCentered) {
-        if (newCentered != centered) {
+        if (newCentered !== centered) {
             centered = newCentered;
             console.log("handleParallaxCentering !!! : " + newCentered);
             var newTweenData = {};
@@ -74,12 +77,12 @@
             } else {
                 newTweenData.startAt = { y: 500 };
             }
-            updateTweenAtIndex(0, newTweenData);
+            updateTweenAtIndex(newTweenData);
         }
     }
 
     function handleParallaxActiveState(newEnabled) {
-        if (newEnabled != enabled) {
+        if (newEnabled !== enabled) {
             enabled = newEnabled;
             controller.enabled(newEnabled);
             controller.update(true);
@@ -98,7 +101,7 @@
                 handleParallaxCentering(false);
                 handleParallaxActiveState(true);
             }
-        }
+        };
     }
 
     $(document).ready(function(){

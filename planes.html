@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="content-type" content="text/html">
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta http-equiv="content-language" content="es-ES">
+        <meta name="description" content=""> <!-- TODO rellenar -->
+        <meta name="keywords" content=""> <!-- TODO rellenar -->
+        <meta name="author" content="Ignacio Gutiérrez Gómez">
+        <meta name="country" content="ES">
+        <title>Nuestros planes - Tolman Incorporated - Entregando sus mensajes más alla del espacio y el tiempo</title>
+        
+        <!-- FontAwesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+        <!-- jQuery -->
+        <script src="js/jquery/jquery-3.3.1.min.js" charset="utf-8"></script>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+        <script src="js/bootstrap/bootstrap.min.js" charset="utf-8"></script>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Ultra|Merriweather" rel="stylesheet">
+
+        <!-- ScrollMagic -->
+        <script src="js/scrollmagic/ScrollMagic.min.js" charset="utf-8"></script>
+        <script src="js/scrollmagic/jquery.ScrollMagic.min.js" charset="utf-8"></script>
+        <script src="js/scrollmagic/animation.velocity.min.js" charset="utf-8"></script>
+        <script src="js/scrollmagic/animation.gsap.min.js" charset="utf-8"></script>
+        <script src="js/scrollmagic/debug.addIndicators.min.js" charset="utf-8"></script>
+        <script src="js/gsap/EasePack.min.js" charset="utf-8"></script>
+        <script src="js/gsap/TimelineLite.min.js" charset="utf-8"></script>
+        <script src="js/gsap/TweenLite.min.js" charset="utf-8"></script>
+        <script src="js/gsap/TweenMax.min.js" charset="utf-8"></script>
+        <script src="js/gsap/TimelineMax.min.js" charset="utf-8"></script>
+
+        <!-- CSS / JS -->
+        <link rel="stylesheet" href="css/index.css">
+        <script src="js/index.js" charset="utf-8"></script>
+        <script src="js/planes.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-principal navbar-dark bg-dark fixed-top page-top" id="navbar">
+            <div class="titulo-contenedor mx-auto order-0">
+                <div class="padding-navbar-toggler"></div>
+                <a class="navbar-brand mx-auto marca" href="#">Tolman</a>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="producto.html">Producto</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Planes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <section id="parallax-trigger">
+                <div class="container-fluid marketing" id="main-marketing">
+                    <div class="row">
+                        <div class="col" id="marketing-slogan">
+                            <h1 id="startchange">Nuestros planes</h1>
+                            <p>Contamos con el producto más competitivo del mercado: el mejor despliegue de características, los mejores precios.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="container planes">
+                    <div class="row">
+                        <div class="planes-tier-col col-lg-3">
+                            <div class="card-group">
+                                <div class="card planes-tier">
+                                    <div class="card-body">
+                                        <div class="plan-cabecera">
+                                            <h5 class="card-title plan-nombre">Personal</h5>
+                                            <p class="card-text plan-descripcion">El plan perfecto para que cualquiera pueda enviar un mensaje al pasado.</p>
+                                        </div>
+                                        <ul class="list-group list-group-flush plan-caracteristicas">
+                                            <li class="list-group-item">Envía mensajes del tamaño de un tweet: 240 caracteres máximo.</li>
+                                            <li class="list-group-item">Envío manual.</li>
+                                            <li class="list-group-item">Prioridad estándar en los tickets (3-5 días laborables).</li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer plan-precio">
+                                        <div class="plan-precio-coste">
+                                            <p class="plan-total">40€</p>
+                                            <p class="plan-unidades">/ mensaje</p>
+                                        </div>
+                                        <p class="card-text"><small>IVA incluido</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="planes-tier-col col-lg-6">
+                            <div class="card-group">
+                                <div class="card planes-tier">
+                                    <div class="card-body">
+                                        <div class="plan-cabecera">
+                                            <h5 class="card-title plan-nombre">Profesional</h5>
+                                            <p class="card-text plan-descripcion">Un plan escalable para enviar un mayor volumen de mensajes.</p>
+                                        </div>
+                                        <ul class="list-group list-group-flush plan-caracteristicas">
+                                            <li class="list-group-item">Envía un máximo de 20 mensajes al mes.</li>
+                                            <li class="list-group-item">Envía mensajes del tamaño de un tweet: 240 caracteres máximo.</li>
+                                            <li class="list-group-item">Envío manual o mediante APIs.</li>
+                                            <li class="list-group-item">Prioridad estándar en los tickets (3-5 días laborables).</li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer plan-precio">
+                                        <div class="plan-precio-coste">
+                                            <p class="plan-total">450€</p>
+                                            <p class="plan-unidades">/ mes</p>
+                                        </div>
+                                        <p class="card-text"><small>IVA incluido</small></p>
+                                    </div>
+                                </div>
+                                <div class="card planes-tier">
+                                    <div class="card-body">
+                                        <div class="plan-cabecera">
+                                            <h5 class="card-title plan-nombre">PyMEs</h5>
+                                            <p class="card-text plan-descripcion">Un plan adaptado para las necesidades de la pequeña y mediana empresa collapse.</p>
+                                        </div>
+                                        <ul class="list-group list-group-flush plan-caracteristicas">
+                                            <li class="list-group-item">Envía un máximo de 150 mensajes al mes.</li>
+                                            <li class="list-group-item">Mensajes con más contenido: imágenes, tipografía...</li>
+                                            <li class="list-group-item">Envío manual o mediante APIs.</li>
+                                            <li class="list-group-item">Alta prioridad en los tickets (1-2 días laborables).</li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer plan-precio">
+                                        <div class="plan-precio-coste">
+                                            <p class="plan-total">3200€</p>
+                                            <p class="plan-unidades">/ mes</p>
+                                        </div>
+                                        <p class="card-text"><small>IVA incluido</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="planes-tier-col col-lg-3">
+                            <div class="card-group">
+                                <div class="card planes-tier">
+                                    <div class="card-body">
+                                        <div class="plan-cabecera">
+                                            <h5 class="card-title plan-nombre">Empresa</h5>
+                                            <p class="card-text plan-descripcion">Nuestro plan más completo; pensado para las grandes empresa collapses.</p>
+                                        </div>
+                                        <ul class="list-group list-group-flush plan-caracteristicas">
+                                            <li class="list-group-item">Customizamos sus volumenes de mensajes en función de sus necesidades.</li>
+                                            <li class="list-group-item">Mensajes con más contenido: imágenes, tipografía...</li>
+                                            <li class="list-group-item">Envío manual o mediante APIs.</li>
+                                            <li class="list-group-item">Alta prioridad en los tickets (1-2 días laborables).</li>
+                                            <li class="list-group-item">Soporte 24/7 por teléfono.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer plan-precio">
+                                        <p class="card-text plan-precio-otro">Contacta con nuestro <a href="contacto.html">equipo de ventas</a>.</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="container">
+                    <h1 class="display-4 titulo-seccion">Comparativa de planes</h1>
+                    <ul class="d-lg-none nav comparativa-selector" id="comparativa-selector" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="personal-tab" data-toggle="collapse" href="#comparativa-personal" data-target=".personal" role="tab" 
+                                aria-controls="home" aria-selected="true">Personal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profesional-tab" data-toggle="collapse" href="#comparativa-profesional" data-target=".profesional" role="tab" 
+                                data-parent="#comparativa" aria-controls="profile" aria-selected="false">Profesional</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pymes-tab" data-toggle="collapse" href="#comparativa-pymes" data-target=".pymes" role="tab" 
+                                data-parent="#comparativa" aria-controls="contact" aria-selected="false">PyMEs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="empresa-tab" data-toggle="collapse" href="#comparativa-empresa" data-target=".empresa" role="tab" 
+                                data-parent="#comparativa" aria-controls="contact" aria-selected="false">Empresa</a>
+                        </li>
+                    </ul>
+                    <div class="container-fluid comparativa" id="comparativa">
+                        <div class="row comparativa-planes">
+                            <div class="col-6 col-lg-4 comparativa-label"></div>
+                            <div class="col-6 col-lg-2 comparativa-celda personal collapse show" data-parent="#comparativa">
+                                <h5 class="comparativa-plan">Personal</h5>
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda profesional collapse" data-parent="#comparativa">
+                                <h5 class="comparativa-plan">Profesional</h5>
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda pymes collapse" data-parent="#comparativa">
+                                <h5 class="comparativa-plan">PyMEs</h5>
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda empresa collapse" data-parent="#comparativa">
+                                <h5 class="comparativa-plan">Empresa</h5>
+                            </div>
+                        </div>
+                        <div class="row comparativa-categoria">
+                            <div class="col-6 col-lg-4 comparativa-celda comparativa-label">
+                                <p class="comparativa-categoria-nombre">Volumen y flexibilidad</p>
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda personal collapse show" data-parent="#comparativa">
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda profesional collapse" data-parent="#comparativa">
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda pymes collapse" data-parent="#comparativa">
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda empresa collapse" data-parent="#comparativa">
+                            </div>
+                        </div>
+                        <div class="row comparativa-caract">
+                            <div class="col-6 col-lg-4 comparativa-celda comparativa-label">
+                                <p class="comparativa-caract-nombre">Mensajes incluidos en el plan</p>
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda personal collapse show" data-parent="#comparativa">
+                                0
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda profesional collapse" data-parent="#comparativa">
+                                20
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda pymes collapse" data-parent="#comparativa">
+                                150
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda empresa collapse" data-parent="#comparativa">
+                                Por contrato
+                            </div>
+                        </div>
+                        <div class="row comparativa-caract">
+                            <div class="col-6 col-lg-4 comparativa-label">
+                                <p class="comparativa-caract-nombre">Envío manual</p>
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda personal collapse show" data-parent="#comparativa">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda profesional collapse" data-parent="#comparativa">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda pymes collapse" data-parent="#comparativa">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda empresa collapse" data-parent="#comparativa">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                        <div class="row comparativa-caract">
+                            <div class="col-6 col-lg-4 comparativa-label">
+                                <p class="comparativa-caract-nombre">Envío mediante APIs</p>
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda personal collapse show" data-parent="#comparativa">
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda profesional collapse" data-parent="#comparativa">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda pymes collapse" data-parent="#comparativa">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda empresa collapse" data-parent="#comparativa">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                        <div class="row comparativa-categoria">
+                            <div class="col-6 col-lg-4 comparativa-celda comparativa-label">
+                                <p class="comparativa-categoria-nombre">Contenido</p>
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda personal collapse show" data-parent="#comparativa">
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda profesional collapse" data-parent="#comparativa">
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda pymes collapse" data-parent="#comparativa">
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda empresa collapse" data-parent="#comparativa">
+                            </div>
+                        </div>
+                        <div class="row comparativa-caract">
+                            <div class="col-6 col-lg-4 comparativa-celda comparativa-label">
+                                <p class="comparativa-caract-nombre">Longitud de los mensajes</p>
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda personal collapse show" data-parent="#comparativa">
+                                240 caracteres
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda profesional collapse" data-parent="#comparativa">
+                                240 caracteres
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda pymes collapse" data-parent="#comparativa">
+                                2048 caracteres
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda empresa collapse" data-parent="#comparativa">
+                                Por contrato
+                            </div>
+                        </div>
+                        <div class="row comparativa-caract">
+                            <div class="col-6 col-lg-4 comparativa-label">
+                                <p class="comparativa-caract-nombre">Contenido multimedia adicional</p>
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda personal collapse show" data-parent="#comparativa">
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda profesional collapse" data-parent="#comparativa">
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda pymes collapse" data-parent="#comparativa">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda empresa collapse" data-parent="#comparativa">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                        <div class="row comparativa-categoria">
+                            <div class="col-6 col-lg-4 comparativa-celda comparativa-label">
+                                <p class="comparativa-categoria-nombre">Rapidez</p>
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda personal collapse show" data-parent="#comparativa">
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda profesional collapse" data-parent="#comparativa">
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda pymes collapse" data-parent="#comparativa">
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda empresa collapse" data-parent="#comparativa">
+                            </div>
+                        </div>
+                        <div class="row comparativa-caract">
+                            <div class="col-6 col-lg-4 comparativa-label">
+                                <p class="comparativa-caract-nombre">Tiempo de envío de dos días</p>
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda personal collapse show" data-parent="#comparativa">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda profesional collapse" data-parent="#comparativa">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda pymes collapse" data-parent="#comparativa">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda empresa collapse" data-parent="#comparativa">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                        <div class="row comparativa-caract">
+                            <div class="col-6 col-lg-4 comparativa-label">
+                                <p class="comparativa-caract-nombre">Prioridad de los tickets de soporte</p>
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda personal collapse show" data-parent="#comparativa">
+                                Estandar
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda profesional collapse" data-parent="#comparativa">
+                                Estandar
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda pymes collapse" data-parent="#comparativa">
+                                Alta
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda empresa collapse" data-parent="#comparativa">
+                                Alta
+                            </div>
+                        </div>
+                        <div class="row comparativa-caract">
+                            <div class="col-6 col-lg-4 comparativa-label">
+                                <p class="comparativa-caract-nombre">Soporte 24/7 por teléfono</p>
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda personal collapse show" data-parent="#comparativa">
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda profesional collapse" data-parent="#comparativa">
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda pymes collapse" data-parent="#comparativa">
+                            </div>
+                            <div class="col-6 col-lg-2 comparativa-celda empresa collapse" data-parent="#comparativa">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="container">
+                    <p class="display-4 infoextra-cabecera">¿Convencido? <a href="contacto.html">Contacta con nosotros</a>.</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container copyright">
+                <div class="row">
+                    <p>Copyright (c) 2019 Tolman Incorporated - Todos los derechos reservados</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
