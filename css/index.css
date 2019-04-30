@@ -61,12 +61,12 @@ nav.navbar > div.titulo-contenedor {
     nav.navbar {
         height: 100px;
     }
-    
-    
+
+
     ul.navbar-nav > li.nav-item:first-child > a.nav-link {
         padding-left: 20px;
     }
-    
+
     ul.navbar-nav > li.nav-item:last-child > a.nav-link {
         padding-right: 20px;
     }
@@ -561,7 +561,7 @@ footer > div.container > div.row > p {
     .comparativa-celda.collapse:not(.active) {
         display: block;
     }
-    
+
     .comparativa-planes {
         display: flex;
     }
@@ -600,6 +600,7 @@ footer > div.container > div.row > p {
     padding: 0;
     position: relative;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .equipo-miembro .equipo-foto {
@@ -641,7 +642,7 @@ footer > div.container > div.row > p {
     .equipo-nombre {
         font-size: 1.5rem;
     }
-    
+
     .equipo-cargo {
         font-size: 85%;
     }
@@ -652,7 +653,7 @@ footer > div.container > div.row > p {
         font-size: 170%;
         margin-bottom: 6px;
     }
-    
+
     .equipo-cargo {
         font-size: 110%;
         margin-top: 6px;
