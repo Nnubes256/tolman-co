@@ -2,11 +2,12 @@
 <html lang="es" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="content-type" content="text/html">
         <meta http-equiv="cache-control" content="no-cache">
         <meta http-equiv="content-language" content="es-ES">
-        <meta name="description" content=""> <!-- TODO rellenar -->
-        <meta name="keywords" content=""> <!-- TODO rellenar -->
+        <meta name="description" content="Contacta con nosotros a traves de nuestro formulario, y encuéntranos en el mapa.">
+        <meta name="keywords" content="Tolman, empresa, contacto, direccion, email, correo, mensaje, mensajería, pasado, espacio-tiempo, espacio-temporal, servicio, tecnología">
         <meta name="author" content="Ignacio Gutiérrez Gómez">
         <meta name="country" content="ES">
         <title>Contacta con nosotros - Tolman Incorporated - Entregando sus mensajes más alla del espacio y el tiempo</title>
@@ -24,28 +25,21 @@
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Ultra|Merriweather" rel="stylesheet">
 
-        <!-- ScrollMagic -->
-        <script src="js/scrollmagic/ScrollMagic.min.js" charset="utf-8"></script>
-        <script src="js/scrollmagic/jquery.ScrollMagic.min.js" charset="utf-8"></script>
-        <script src="js/scrollmagic/animation.velocity.min.js" charset="utf-8"></script>
-        <script src="js/scrollmagic/animation.gsap.min.js" charset="utf-8"></script>
-        <script src="js/scrollmagic/debug.addIndicators.min.js" charset="utf-8"></script>
-        <script src="js/gsap/EasePack.min.js" charset="utf-8"></script>
-        <script src="js/gsap/TimelineLite.min.js" charset="utf-8"></script>
-        <script src="js/gsap/TweenLite.min.js" charset="utf-8"></script>
-        <script src="js/gsap/TweenMax.min.js" charset="utf-8"></script>
-        <script src="js/gsap/TimelineMax.min.js" charset="utf-8"></script>
+        <!-- Leaflet -->
+        <link rel="stylesheet" href="css/leaflet/leaflet.css">
+        <script src="js/leaflet/leaflet.js" charset="utf-8"></script>
 
         <!-- CSS / JS -->
         <link rel="stylesheet" href="css/index.css">
-        <script src="js/index.js" charset="utf-8"></script>
+        <script src="js/navbar.js" charset="utf-8"></script>
+        <script src="js/cookies.js" charset="utf-8"></script>
         <script src="js/contacto.js" charset="utf-8"></script>
     </head>
     <body>
         <nav class="navbar navbar-expand-md navbar-principal navbar-dark bg-dark fixed-top page-top" id="navbar">
             <div class="titulo-contenedor mx-auto order-0">
                 <div class="padding-navbar-toggler"></div>
-                <a class="navbar-brand mx-auto marca" href="#">Tolman</a>
+                <a class="navbar-brand mx-auto marca" href="index.html">Tolman</a>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target=".dual-collapse2">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -68,20 +62,80 @@
                 </ul>
             </div>
         </nav>
+        <div class="container-fluid aviso-cookies" id="aviso-cookies">
+            <div class="row">
+                <div class="col-lg-10">
+                    <p class="aviso-cookies-texto">En nuestro sitio web utilizamos cookies propias para mejorar tu experiencia de usuario y recoger datos estadísticos sobre el uso de nuestra web por parte de los usuarios. Si navegas por nuestra web, estarás aceptando el
+                        uso de las cookies en las condiciones establecidas en esta Política de Cookies. Esta política puede ser actualizada, por lo que te invitamos a revisarla de forma regular.</p>
+                </div>
+                <div class="col-lg-2 aviso-cookies-boton-cont">
+                    <button class="btn btn-primary aviso-cookies-boton" id="aceptar-cookies">Acepto</button>
+                </div>
+            </div>
+        </div>
         <main>
             <section id="parallax-trigger">
                 <div class="container-fluid marketing" id="main-marketing">
                     <div class="row">
                         <div class="col" id="marketing-slogan">
-                            <h1 id="startchange">¿Quiénes somos?</h1>
+                            <h1 id="startchange">Contacta con nosotros.</h1>
                             <p>Somos una empresa pionera cuya misión es la de proporcionar un vínculo a nuestro pasado, con el fin de poder cambiar el futuro.</p>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="content">
+                <div class="container">
+                    <h1 class="display-4 titulo-seccion" id="contacto">Contacto</h1>
+                    <p>Puede contactar con nosotros a través del siguiente formulario; simplemente deje sus datos y un mensaje aquí y nosotros le contactaremos.</p>
+                    <p>Para temas relacionados con el sitio web, puede contactar al webmaster a través del siguiente contacto:</p>
+                    <address>
+                        <strong>Ignacio Gutiérrez Gómez</strong><br>
+                        Webmaster<br>
+                        E-Mail: <a href="mailto:nnubes256@gmail.com">nnubes256@gmail.com</a>
+                    </address>
+                    <hr>
+                    <form id="form-contacto" method="post" action="https://postman-echo.com/post" novalidate autocomplete="off">
+                        <fieldset class="form-group form-row">
+                            <div class="col-md">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="John" required>
+                                <div class="invalid-feedback">
+                                    Por favor, introduza su nombre.
+                                </div>
+                                </div>
+                            <div class="col-md">
+                                <label for="apellidos">Apellidos</label>
+                                <input type="text" class="form-control" name="apellidos" id="apellidos" placeholder="Doe" required>
+                                <div class="invalid-feedback">
+                                    Por favor, introduza sus apellidos.
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="empresa">Empresa (opcional)</label>
+                            <input type="text" class="form-control" name="empresa" id="empresa" placeholder="John Doe Incorporated">
+                            <div class="invalid-feedback" id="error_empresa"></div>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="email">Dirección de correo electrónico</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="john.doe@example.com" required>
+                            <div class="invalid-feedback" id="error_email"></div>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea class="form-control" name="mensaje" id="mensaje" rows="5" required></textarea>
+                            <div class="invalid-feedback" id="error_mensaje">
+                                Por favor, introduza un mensaje.
+                            </div>
+                        </fieldset>
+                        <button type="submit" class="btn btn-primary btn-lg contacto-enviar">Enviar formulario</button>
+                    </form>
+                </div>
+            </section>
+            <section class="content">
                 <div class="container equipo-grid">
-                    <h1 class="display-4 titulo-seccion">Conoce al equipo.</h1>
+                    <h1 class="display-4 titulo-seccion" id="equipo">Conoce al equipo.</h1>
                     <div class="row">
                         <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 equipo-miembro">
                             <img class="equipo-foto" src="media/equipo/tyler-mclaughlin.jpg" alt="Tyler Mclaughlin">
@@ -129,44 +183,23 @@
                 </div>
             </section>
             <section class="content">
-                <div class="container" id="contacto">
-                    <h1>Contacto</h1>
-                    <form id="form-contacto" method="post" action="https://postman-echo.com/post" novalidate autocomplete="off">
-                        <fieldset class="form-group form-row">
-                            <div class="col-md">
-                                <label for="nombre">Nombre</label>
-                                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="John" required>
-                                <div class="invalid-feedback">
-                                    Por favor, introduza su nombre.
-                                </div>
-                                </div>
-                            <div class="col-md">
-                                <label for="apellidos">Apellidos</label>
-                                <input type="text" class="form-control" name="apellidos" id="apellidos" placeholder="Doe" required>
-                                <div class="invalid-feedback">
-                                    Por favor, introduza sus apellidos.
-                                </div>
-                            </div>
-                        </fieldset>
-                        <fieldset class="form-group">
-                            <label for="empresa">Empresa (opcional)</label>
-                            <input type="text" class="form-control" name="empresa" id="empresa" placeholder="John Doe Incorporated">
-                            <div class="invalid-feedback" id="error_empresa"></div>
-                        </fieldset>
-                        <fieldset class="form-group">
-                            <label for="email">Dirección de correo electrónico</label>
-                            <input type="email" class="form-control" name="email" id="email" placeholder="john.doe@example.com" required>
-                            <div class="invalid-feedback" id="error_email"></div>
-                        </fieldset>
-                        <button type="submit" class="btn btn-primary">Enviar formulario</button>
-                    </form>
+                <div class="container">
+                    <h1 class="display-4 titulo-seccion" id="ubicacion">¿Donde estámos?</h1>
+                    <p>Estamos en:</p>
+                    <address>
+                        <strong>Tolman Incorporated</strong><br>
+                        Calle de San Bernardo, 93<br>
+                        28015 Madrid, España
+                        <a href="mailto:sales@example.com">sales@example.com</a>
+                    </address>
+                    <div id="mapa-contacto"></div>
                 </div>
             </section>
         </main>
         <footer>
             <div class="container copyright">
                 <div class="row">
-                    <p>Copyright (c) 2019 Tolman Incorporated - Todos los derechos reservados</p>
+                    <p>Copyright (c) 2019 Tolman Incorporated - Todos los derechos reservados | <a href="politica-de-cookies.html">Política de Cookies</a></p>
                 </div>
             </div>
         </footer>

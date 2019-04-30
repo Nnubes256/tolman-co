@@ -2,11 +2,12 @@
 <html lang="es" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="content-type" content="text/html">
         <meta http-equiv="cache-control" content="no-cache">
         <meta http-equiv="content-language" content="es-ES">
-        <meta name="description" content=""> <!-- TODO rellenar -->
-        <meta name="keywords" content=""> <!-- TODO rellenar -->
+        <meta name="description" content="Tolman es una compañía que entrega cada mes más de dos millones de mensajes a tiempos pasados para sus clientes.">
+        <meta name="keywords" content="Tolman, empresa, tiempo, mensaje, mensajería, pasado, espacio-tiempo, espacio-temporal, servicio, tecnología">
         <meta name="author" content="Ignacio Gutiérrez Gómez">
         <meta name="country" content="ES">
         <title>Tolman Incorporated - Entregando sus mensajes más alla del espacio y el tiempo</title>
@@ -35,6 +36,8 @@
 
         <!-- CSS / JS -->
         <link rel="stylesheet" href="css/index.css">
+        <script src="js/navbar.js" charset="utf-8"></script>
+        <script src="js/cookies.js" charset="utf-8"></script>
         <script src="js/index.js" charset="utf-8"></script>
     </head>
     <body>
@@ -64,6 +67,17 @@
                 </ul>
             </div>
         </nav>
+        <div class="container-fluid aviso-cookies" id="aviso-cookies">
+            <div class="row">
+                <div class="col-lg-10">
+                    <p class="aviso-cookies-texto">En nuestro sitio web utilizamos cookies propias para mejorar tu experiencia de usuario y recoger datos estadísticos sobre el uso de nuestra web por parte de los usuarios. Si navegas por nuestra web, estarás aceptando el
+                        uso de las cookies en las condiciones establecidas en esta Política de Cookies. Esta política puede ser actualizada, por lo que te invitamos a revisarla de forma regular.</p>
+                </div>
+                <div class="col-lg-2 aviso-cookies-boton-cont">
+                    <button class="btn btn-primary aviso-cookies-boton" id="aceptar-cookies">Acepto</button>
+                </div>
+            </div>
+        </div>
         <main>
             <section id="parallax-trigger">
                 <div class="container-fluid marketing" id="main-marketing">
@@ -108,12 +122,12 @@
                 <div class="container" id="rendimiento">
                     <h1 class="display-4 titulo-seccion">El mayor rendimiento</h1>
                     <div class="row">
-                        <div id="carouselPaginaPrincipal" class="carousel slide col-md-6" data-ride="carousel"
-                            data-interval="8000">
+                        <div id="carouselDatosPaginaPrincipal" class="carousel slide col-lg-6 seccion-imagen"
+                        data-ride="carousel" data-interval="8000">
                             <ol class="carousel-indicators">
-                                <li data-target="#carouselPaginaPrincipal" data-slide-to="0" class="active"></li>
-                                <li data-target="#carouselPaginaPrincipal" data-slide-to="1"></li>
-                                <li data-target="#carouselPaginaPrincipal" data-slide-to="2"></li>
+                                <li data-target="#carouselDatosPaginaPrincipal" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselDatosPaginaPrincipal" data-slide-to="1"></li>
+                                <li data-target="#carouselDatosPaginaPrincipal" data-slide-to="2"></li>
                             </ol>
                             <div class="carousel-inner">
                                 <figure class="carousel-item active">
@@ -199,19 +213,19 @@
                                     </div>
                                 </figure>
                             </div>
-                            <a class="carousel-control-prev" href="#carouselPaginaPrincipal" role="button" data-slide="prev">
+                            <a class="carousel-control-prev" href="#carouselDatosPaginaPrincipal" role="button" data-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Previous</span>
                             </a>
-                            <a class="carousel-control-next" href="#carouselPaginaPrincipal" role="button" data-slide="next">
+                            <a class="carousel-control-next" href="#carouselDatosPaginaPrincipal" role="button" data-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                             </a>
                         </div>
-                        <div class="col-md-6 descripcion">
+                        <div class="col-lg-6 descripcion seccion-texto">
                             <p class="lead">
-                                Tolman cuenta con los volúmenes más altos de envio de mensajes
-                                registrados en la industria, con más de <b>60000</b> mensajes
+                                <span class="marca">Tolman</span> cuenta con los volúmenes más altos de envio de mensajes
+                                registrados en la industria, con más de <strong>60000 mensajes</strong>
                                 enviados al día.
                             </p>
                             <p class="lead">
@@ -219,6 +233,68 @@
                                 a una escala muy superior que la de la competencia.
                             </p>
                         </div>
+                    </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="container">
+                    <h1 class="display-4 titulo-seccion">La mejor infraestructura</h1>
+                    <div class="row">
+                        <div class="col-md-6 order-last order-md-first seccion-texto">
+                            <p class="lead">
+                                Para soportar estos volúmenes de mensajes, <span class="marca">Tolman</span> se apoya
+                                en una plataforma tecnológica sin precedentes, con más de 30 centros de datos repartidos
+                                por el globo, junto con los Nodos Hawking, en los cuales se realiza el proceso de envío
+                                actual.
+                            </p>
+                            <p class="lead">
+                                Sobre esta plataforma tecnológica, <span class="marca">Tolman</span> apuesta por el futuro...
+                                y el pasado.
+                            </p>
+                        </div>
+                        <div id="carouselInfraesPaginaPrincipal" class="carousel carousel-fotos slide col-md-6" data-ride="carousel"
+                            data-interval="8000">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselInfraesPaginaPrincipal" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselInfraesPaginaPrincipal" data-slide-to="1"></li>
+                                <li data-target="#carouselInfraesPaginaPrincipal" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <figure class="carousel-item active">
+                                    <figcaption class="fotografia-descripcion">
+                                        Uno de nuestros centros de datos, en Suiza.
+                                    </figcaption>
+                                    <div class="fotografia">
+                                        <img src="media/carousel-2-1.jpg" alt="">
+                                    </div>
+                                </figure>
+                                <figure class="carousel-item">
+                                    <figcaption class="fotografia-descripcion">
+                                        Una de las salas de control 24/7 en nuestros centros de datos.
+                                    </figcaption>
+                                    <div class="fotografia">
+                                        <img src="media/carousel-2-2.jpg" alt="">
+                                    </div>
+                                </figure>
+                                <figure class="carousel-item">
+                                    <figcaption class="fotografia-descripcion">
+                                        Volumen relativo de envíos con éxito al mes.
+                                    </figcaption>
+                                    <div class="fotografia">
+                                        <img src="media/carousel-2-3.jpg" alt="">
+                                    </div>
+                                </figure>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselInfraesPaginaPrincipal" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselInfraesPaginaPrincipal" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+
                     </div>
                 </div>
             </section>
@@ -238,7 +314,7 @@
         <footer>
             <div class="container copyright">
                 <div class="row">
-                    <p>Copyright (c) 2019 Tolman Incorporated - Todos los derechos reservados</p>
+                    <p>Copyright (c) 2019 Tolman Incorporated - Todos los derechos reservados | <a href="politica-de-cookies.html">Política de Cookies</a></p>
                 </div>
             </div>
         </footer>

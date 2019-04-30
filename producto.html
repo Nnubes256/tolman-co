@@ -2,15 +2,16 @@
 <html lang="es" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="content-type" content="text/html">
         <meta http-equiv="cache-control" content="no-cache">
         <meta http-equiv="content-language" content="es-ES">
-        <meta name="description" content=""> <!-- TODO rellenar -->
-        <meta name="keywords" content=""> <!-- TODO rellenar -->
+        <meta name="description" content="Consulta la información de nuestro producto estrella: el envío de mensajes al pasado.">
+        <meta name="keywords" content="Tolman, empresa, producto, tiempo, mensaje, mensajería, pasado, espacio-tiempo, espacio-temporal, servicio, tecnología">
         <meta name="author" content="Ignacio Gutiérrez Gómez">
         <meta name="country" content="ES">
         <title>Nuestro producto - Tolman Incorporated - Entregando sus mensajes más alla del espacio y el tiempo</title>
-        
+
         <!-- FontAwesome -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
@@ -24,27 +25,16 @@
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Ultra|Merriweather" rel="stylesheet">
 
-        <!-- ScrollMagic -->
-        <script src="js/scrollmagic/ScrollMagic.min.js" charset="utf-8"></script>
-        <script src="js/scrollmagic/jquery.ScrollMagic.min.js" charset="utf-8"></script>
-        <script src="js/scrollmagic/animation.velocity.min.js" charset="utf-8"></script>
-        <script src="js/scrollmagic/animation.gsap.min.js" charset="utf-8"></script>
-        <script src="js/scrollmagic/debug.addIndicators.min.js" charset="utf-8"></script>
-        <script src="js/gsap/EasePack.min.js" charset="utf-8"></script>
-        <script src="js/gsap/TimelineLite.min.js" charset="utf-8"></script>
-        <script src="js/gsap/TweenLite.min.js" charset="utf-8"></script>
-        <script src="js/gsap/TweenMax.min.js" charset="utf-8"></script>
-        <script src="js/gsap/TimelineMax.min.js" charset="utf-8"></script>
-
         <!-- CSS / JS -->
         <link rel="stylesheet" href="css/index.css">
-        <script src="js/index.js" charset="utf-8"></script>
+        <script src="js/navbar.js" charset="utf-8"></script>
+        <script src="js/cookies.js" charset="utf-8"></script>
     </head>
     <body>
         <nav class="navbar navbar-expand-md navbar-principal navbar-dark bg-dark fixed-top page-top" id="navbar">
             <div class="titulo-contenedor mx-auto order-0">
                 <div class="padding-navbar-toggler"></div>
-                <a class="navbar-brand mx-auto marca" href="#">Tolman</a>
+                <a class="navbar-brand mx-auto marca" href="index.html">Tolman</a>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target=".dual-collapse2">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -67,9 +57,20 @@
                 </ul>
             </div>
         </nav>
+        <div class="container-fluid aviso-cookies" id="aviso-cookies">
+            <div class="row">
+                <div class="col-lg-10">
+                    <p class="aviso-cookies-texto">En nuestro sitio web utilizamos cookies propias para mejorar tu experiencia de usuario y recoger datos estadísticos sobre el uso de nuestra web por parte de los usuarios. Si navegas por nuestra web, estarás aceptando el
+                        uso de las cookies en las condiciones establecidas en esta Política de Cookies. Esta política puede ser actualizada, por lo que te invitamos a revisarla de forma regular.</p>
+                </div>
+                <div class="col-lg-2 aviso-cookies-boton-cont">
+                    <button class="btn btn-primary aviso-cookies-boton" id="aceptar-cookies">Acepto</button>
+                </div>
+            </div>
+        </div>
         <main>
             <section id="parallax-trigger">
-                <div class="container-fluid marketing" id="main-marketing">
+                <div class="container-fluid marketing marketing-caracteristicas" id="main-marketing">
                     <div class="row">
                         <div class="col-md-6" id="marketing-slogan">
                             <h1 id="startchange">Mensajería espacio-temporal que funciona</h1>
@@ -77,8 +78,8 @@
                             <p>Somos pioneros en el mercado; tenemos un sistema que funciona, a gran escala, y listo para la empresa.</p>
                             <p>Y, no solo contamos con el producto más completo del mercado: también contamos con el mejor rendimiento.</p>
                         </div>
-                        <div class="col-md-6 card">
-                             <ul class="list-group list-group-flush">
+                        <div class="col-md-6 card caracteristicas-container">
+                             <ul class="list-group list-group-flush caracteristicas">
                                 <li class="list-group-item"><strong>Rápido</strong> - Tiempo de entrega de dos días</li>
                                 <li class="list-group-item"><strong>Seguro</strong> - Comprobación de los mensajes por expertos</li>
                                 <li class="list-group-item"><strong>Flexible</strong> - Envío manual o mediante APIs</li>
@@ -92,9 +93,9 @@
             </section>
             <section class="content">
                 <div class="container">
-                    <h1 class="display-4 titulo-seccion"><span class="marca">Tolman</span> es estado del arte.</h1>
+                    <h1 class="display-4 titulo-seccion" id="estado-arte"><span class="marca">Tolman</span> es estado del arte.</h1>
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 order-last order-md-first seccion-texto">
                             <p>
                                 Contamos con una plataforma tecnológica sin parangón en el mundo. Nuestros clientes
                                 se comunican con nuestro servicio de envío a través de más de <strong>30 centros de datos</strong>
@@ -108,7 +109,7 @@
                                 la transmisión de los mensajes.
                             </p>
                         </div>
-                        <div class="col-lg-6 infraes">
+                        <div class="col-lg-6 seccion-imagen infraes">
                             <div class="infraes-usuario">
                                 <i class="fas fa-users infraes-logo"></i>
                                 <small class="infraes-label">Usuarios</small>
@@ -133,17 +134,22 @@
             </section>
             <section class="content">
                 <div class="container">
-                    <h1 class="display-4 titulo-seccion"><span class="marca">Tolman</span> es rapidez.</h1>
+                    <h1 class="display-4 titulo-seccion" id="rapidez"><span class="marca">Tolman</span> es rapidez.</h1>
                     <div class="row">
-                        <div class="col-lg-6">
-
+                        <div class="col-lg-6 seccion-imagen">
+                            <img class="seccion-imagen-unica" src="media/running-ninja.svg" alt="Lo más rápido">
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 seccion-texto">
                             <p>
-                                Lorem Ipsum
+                                Nuestra velocidad de envío no tiene comparación en la industria. Somos capaces de
+                                procesar más de <strong>dos millones</strong> de mensajes por mes, manteniendo un
+                                tiempo de recepción record de <strong>dos días</strong>.
                             </p>
                             <p>
-                                Lorem Ipsum
+                                Conseguimos mantener este volúmen de información apoyándonos en nuestra
+                                infraestructura puntera, junto con los más de <strong>6000 expertos</strong> que
+                                verifican de forma individual los mensajes, apoyándose en las herramientas de
+                                observación cuántica más innovadoras para agilizar los procesos.
                             </p>
                         </div>
                     </div>
@@ -151,32 +157,94 @@
             </section>
             <section class="content">
                 <div class="container">
-                    <h1 class="display-4 titulo-seccion"><span class="marca">Tolman</span> es seguridad.</h1>
+                    <h1 class="display-4 titulo-seccion" id="seguridad"><span class="marca">Tolman</span> es seguridad.</h1>
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 order-last order-md-first seccion-texto">
                             <p>
-                                Lorem Ipsum
+                                Sabemos lo importante que es la seguridad para nuestros clientes. Por ello,
+                                seguimos un riguroso proceso de auditoría que va más allá de las certificaciones
+                                actuales.
                             </p>
                             <p>
-                                Lorem Ipsum
+                                Nuestros Nodos Hawking cuentan con una seguiridad física inpenetrable, con
+                                seguridad física de grado militar para asegurar sus mensajes. Nuestros centros
+                                de datos no son menos; nuestro sistema de control de acceso ha sido desarrollado
+                                específicamente para protegerlos, encontrándose a años luz de los sistemas actuales.
+                            </p>
+                            <p>
+                                Pero, no solo podemos conformarnos con la seguridad típica de una compañía
+                                tecnólogica; en nuestro campo, hay mucho más en juego. Para ello, nuestro
+                                equipo de expertos cuenta con la misión de revisar de forma individual los más de
+                                dos millones de mensajes que recibimos al mes, con el fin de evitar que surjan
+                                fallos temporales.
                             </p>
                         </div>
-                        <div class="col-lg-6">
-
+                        <div class="col-lg-6 seccion-imagen">
+                            <img class="seccion-imagen-unica" src="media/locked-fortress.svg" alt="Lo más seguro">
                         </div>
                     </div>
                 </div>
             </section>
             <section class="content">
                 <div class="container">
-                    <h1 class="display-4 titulo-seccion">Y mucho más...</h1>
+                    <h1 class="display-4 titulo-seccion" id="otros">Y mucho más...</h1>
+                    <div class="card-columns">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Robustez</h5>
+                                <p class="card-text">Nuestros envíos tienen un 98% de éxito, record en la industria.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Precio</h5>
+                                <p class="card-text">Contamos con los precios más competitivos de la industria, además planes de entrada con los que cualquiera puede comenzar.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Contenido textual</h5>
+                                <p class="card-text">Tenemos el límite de caracteres más amplio de la industria: 240 caracteres. Los clientes en el plan <strong>PyMEs</strong> pueden ampliar a 2048 caracteres, además de customizar la tipografía.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Contenido multimedia</h5>
+                                <p class="card-text">Los clientes en los planes <strong>PyMEs</strong> y <strong>Empresa</strong> pueden emplear contenido multimedia adicional como imágenes, además de poder personalizar la colocación del documento final.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Soporte vía tickets</h5>
+                                <p class="card-text">Nuestros clientes pueden pedir soporte mediante nuestro sistema de tickets. Los clientes en el plan <strong>PyMEs</strong> y superior cuentan con una prioridad mayor en sus tickets.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Soporte 24/7 por teléfono</h5>
+                                <p class="card-text">Los clientes en el plan <strong>Empresa</strong> disponen de una línea de teléfono dedicada 24/7 para garantizarles el soporte más inmediato posible.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="container">
+                    <div class="row infoextra">
+                        <div class="col-md-6">
+                            <p class="display-4 infoextra-cabecera">¿Listo para comenzar? Mira <a href="planes.html">nuestros planes</a>.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="display-4 infoextra-cabecera">¿Tienes más preguntas? <a class="text-nowrap" href="contacto.html#contacto">Contacta con nosotros</a>.</p>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
         <footer>
             <div class="container copyright">
                 <div class="row">
-                    <p>Copyright (c) 2019 Tolman Incorporated - Todos los derechos reservados</p>
+                    <p>Copyright (c) 2019 Tolman Incorporated - Todos los derechos reservados | <a href="politica-de-cookies.html">Política de Cookies</a></p>
                 </div>
             </div>
         </footer>

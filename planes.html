@@ -2,15 +2,16 @@
 <html lang="es" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="content-type" content="text/html">
         <meta http-equiv="cache-control" content="no-cache">
         <meta http-equiv="content-language" content="es-ES">
-        <meta name="description" content=""> <!-- TODO rellenar -->
-        <meta name="keywords" content=""> <!-- TODO rellenar -->
+        <meta name="description" content="Consulta nuestros planes; los más competitivos del mercado.">
+        <meta name="keywords" content="Tolman, empresa, planes, precio, precios, mensaje, mensajería, pasado, espacio-tiempo, espacio-temporal, servicio, tecnología">
         <meta name="author" content="Ignacio Gutiérrez Gómez">
         <meta name="country" content="ES">
         <title>Nuestros planes - Tolman Incorporated - Entregando sus mensajes más alla del espacio y el tiempo</title>
-        
+
         <!-- FontAwesome -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
@@ -24,28 +25,17 @@
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Ultra|Merriweather" rel="stylesheet">
 
-        <!-- ScrollMagic -->
-        <script src="js/scrollmagic/ScrollMagic.min.js" charset="utf-8"></script>
-        <script src="js/scrollmagic/jquery.ScrollMagic.min.js" charset="utf-8"></script>
-        <script src="js/scrollmagic/animation.velocity.min.js" charset="utf-8"></script>
-        <script src="js/scrollmagic/animation.gsap.min.js" charset="utf-8"></script>
-        <script src="js/scrollmagic/debug.addIndicators.min.js" charset="utf-8"></script>
-        <script src="js/gsap/EasePack.min.js" charset="utf-8"></script>
-        <script src="js/gsap/TimelineLite.min.js" charset="utf-8"></script>
-        <script src="js/gsap/TweenLite.min.js" charset="utf-8"></script>
-        <script src="js/gsap/TweenMax.min.js" charset="utf-8"></script>
-        <script src="js/gsap/TimelineMax.min.js" charset="utf-8"></script>
-
         <!-- CSS / JS -->
         <link rel="stylesheet" href="css/index.css">
-        <script src="js/index.js" charset="utf-8"></script>
+        <script src="js/navbar.js" charset="utf-8"></script>
+        <script src="js/cookies.js" charset="utf-8"></script>
         <script src="js/planes.js" charset="utf-8"></script>
     </head>
     <body>
         <nav class="navbar navbar-expand-md navbar-principal navbar-dark bg-dark fixed-top page-top" id="navbar">
             <div class="titulo-contenedor mx-auto order-0">
                 <div class="padding-navbar-toggler"></div>
-                <a class="navbar-brand mx-auto marca" href="#">Tolman</a>
+                <a class="navbar-brand mx-auto marca" href="index.html">Tolman</a>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target=".dual-collapse2">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -68,6 +58,17 @@
                 </ul>
             </div>
         </nav>
+        <div class="container-fluid aviso-cookies" id="aviso-cookies">
+            <div class="row">
+                <div class="col-lg-10">
+                    <p class="aviso-cookies-texto">En nuestro sitio web utilizamos cookies propias para mejorar tu experiencia de usuario y recoger datos estadísticos sobre el uso de nuestra web por parte de los usuarios. Si navegas por nuestra web, estarás aceptando el
+                        uso de las cookies en las condiciones establecidas en esta Política de Cookies. Esta política puede ser actualizada, por lo que te invitamos a revisarla de forma regular.</p>
+                </div>
+                <div class="col-lg-2 aviso-cookies-boton-cont">
+                    <button class="btn btn-primary aviso-cookies-boton" id="aceptar-cookies">Acepto</button>
+                </div>
+            </div>
+        </div>
         <main>
             <section id="parallax-trigger">
                 <div class="container-fluid marketing" id="main-marketing">
@@ -80,7 +81,7 @@
                 </div>
             </section>
             <section class="content">
-                <div class="container planes">
+                <div class="container planes" id="planes">
                     <div class="row">
                         <div class="planes-tier-col col-lg-3">
                             <div class="card-group">
@@ -179,22 +180,22 @@
             </section>
             <section class="content">
                 <div class="container">
-                    <h1 class="display-4 titulo-seccion">Comparativa de planes</h1>
+                    <h1 class="display-4 titulo-seccion" id="comparativa-planes">Comparativa de planes</h1>
                     <ul class="d-lg-none nav comparativa-selector" id="comparativa-selector" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" id="personal-tab" data-toggle="collapse" href="#comparativa-personal" data-target=".personal" role="tab" 
+                            <a class="nav-link active" id="personal-tab" data-toggle="collapse" href="#comparativa-personal" data-target=".personal" role="tab"
                                 aria-controls="home" aria-selected="true">Personal</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="profesional-tab" data-toggle="collapse" href="#comparativa-profesional" data-target=".profesional" role="tab" 
+                            <a class="nav-link" id="profesional-tab" data-toggle="collapse" href="#comparativa-profesional" data-target=".profesional" role="tab"
                                 data-parent="#comparativa" aria-controls="profile" aria-selected="false">Profesional</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="pymes-tab" data-toggle="collapse" href="#comparativa-pymes" data-target=".pymes" role="tab" 
+                            <a class="nav-link" id="pymes-tab" data-toggle="collapse" href="#comparativa-pymes" data-target=".pymes" role="tab"
                                 data-parent="#comparativa" aria-controls="contact" aria-selected="false">PyMEs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="empresa-tab" data-toggle="collapse" href="#comparativa-empresa" data-target=".empresa" role="tab" 
+                            <a class="nav-link" id="empresa-tab" data-toggle="collapse" href="#comparativa-empresa" data-target=".empresa" role="tab"
                                 data-parent="#comparativa" aria-controls="contact" aria-selected="false">Empresa</a>
                         </li>
                     </ul>
@@ -388,14 +389,14 @@
             </section>
             <section class="content">
                 <div class="container">
-                    <p class="display-4 infoextra-cabecera">¿Convencido? <a href="contacto.html">Contacta con nosotros</a>.</p>
+                    <p class="display-4 infoextra-cabecera">¿Convencido? ¿Tienes más preguntas? <a href="contacto.html#contacto">Contacta con nosotros</a>.</p>
                 </div>
             </section>
         </main>
         <footer>
             <div class="container copyright">
                 <div class="row">
-                    <p>Copyright (c) 2019 Tolman Incorporated - Todos los derechos reservados</p>
+                    <p>Copyright (c) 2019 Tolman Incorporated - Todos los derechos reservados | <a href="politica-de-cookies.html">Política de Cookies</a></p>
                 </div>
             </div>
         </footer>

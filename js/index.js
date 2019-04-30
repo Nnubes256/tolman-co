@@ -5,7 +5,6 @@
     'use strict';
 
     var jWindow = $(window);
-    var jDocument = $(document);
 
     var controller;
     var tween;
@@ -50,23 +49,6 @@
         scene.setTween(subTween);
     }
 
-    function NavbarScrollHandler() {
-        var scroll_start = 0;
-        var startchange = $('#startchange');
-        var offset = startchange.offset();
-        var size = startchange.height();
-        var navbarSize = $('#navbar').height();
-
-        return function onScroll() {
-            scroll_start = jDocument.scrollTop();
-            if((scroll_start + size + navbarSize) > offset.top) {
-                $(".navbar").removeClass('page-top');
-            } else {
-                $('.navbar').addClass('page-top');
-            }
-        };
-    }
-
     function handleParallaxCentering(newCentered) {
         if (newCentered !== centered) {
             centered = newCentered;
@@ -105,7 +87,6 @@
     }
 
     $(document).ready(function(){
-        $(document).scroll(NavbarScrollHandler());
         $(window).resize(ResizeHandler());
         createParallaxController();
     });
