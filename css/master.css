@@ -801,6 +801,24 @@ footer > div.container > div.row > p {
     }
 }
 
+.expandido-datos-container {
+    text-align: center;
+    margin: 0.5rem;
+}
+
+.ampliacion-imagen {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.ampliacion-imagen.show {
+    opacity: 1;
+}
+
+.ampliacion-imagen .modal-content {
+    background-color: #5e4938;
+}
+
 #mapa-contacto {
     height: 480px;
 }

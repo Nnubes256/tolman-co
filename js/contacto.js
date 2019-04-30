@@ -64,6 +64,15 @@
         }
     }
 
+    function activarModal(elementoImagen) {
+        $('#imagen-ampliada').attr('src', elementoImagen.attr('src'));
+        $('#imagen-ampliada').attr('alt', elementoImagen.attr('alt'));
+        $('#imagen-ampliada').attr('title', elementoImagen.attr('alt'));
+        $('#expandido-nombre').text(elementoImagen.attr('alt'));
+        $('#expandido-cargo').text(elementoImagen.attr('data-cargo'));
+        $('#ampliacion-imagen').modal();
+    }
+
     // --------------------------------
 
     var PARAMETROS_MAPA = {
@@ -102,18 +111,25 @@
                 comprobarFormulario(evento);
             }
         });
-        $('.equipo-miembro').on('touchstart', function (evento) {
-            var elementoActual = $(this);
-            if (!(elementoActual.hasClass('show'))) {
-                $('.equipo-miembro').removeClass('hover');
-            }
-            $(this).addClass('hover');
+        $('.equipo-miembro').on({
+            'touchstart': function (evento) {
+                var elementoActual = $(this);
+                if (!(elementoActual.hasClass('show'))) {
+                    $('.equipo-miembro').removeClass('hover');
+                }
 
-            if (miembroToqueTimeout) {
-                clearTimeout(miembroToqueTimeout);
-            }
+                $(this).addClass('hover');
 
-            miembroToqueTimeout = setTimeout(crearMiembroToqueTimeout(elementoActual), 4000);
+                if (miembroToqueTimeout) {
+                    activarModal($($(this).find('.equipo-foto')[0]));
+                    clearTimeout(miembroToqueTimeout);
+                }
+
+                miembroToqueTimeout = setTimeout(crearMiembroToqueTimeout(elementoActual), 4000);
+            },
+            'click': function (evento) {
+                activarModal($($(this).find('.equipo-foto')[0]));
+            }
         });
         configurarMapa('mapa-contacto');
     });

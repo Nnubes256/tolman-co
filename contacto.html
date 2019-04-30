@@ -30,7 +30,7 @@
         <script src="js/leaflet/leaflet.js" charset="utf-8"></script>
 
         <!-- CSS / JS -->
-        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/master.css">
         <script src="js/navbar.js" charset="utf-8"></script>
         <script src="js/cookies.js" charset="utf-8"></script>
         <script src="js/contacto.js" charset="utf-8"></script>
@@ -70,6 +70,18 @@
                 </div>
                 <div class="col-lg-2 aviso-cookies-boton-cont">
                     <button class="btn btn-primary aviso-cookies-boton" id="aceptar-cookies">Acepto</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal ampliacion-imagen" tabindex="-1" role="dialog" id="ampliacion-imagen">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <img class="img-fluid" id="imagen-ampliada" src="" alt="" title="">
+                    <div class="expandido-datos-container">
+                        <h5 id="expandido-nombre"></h5>
+                        <p><small id="expandido-cargo"></small></p>
+                        <p><small id="expandido-cargo"><em>(pulsa fuera para cerrar)</em></small></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -138,42 +150,42 @@
                     <h1 class="display-4 titulo-seccion" id="equipo">Conoce al equipo.</h1>
                     <div class="row">
                         <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 equipo-miembro">
-                            <img class="equipo-foto" src="media/equipo/tyler-mclaughlin.jpg" alt="Tyler Mclaughlin">
+                            <img class="equipo-foto" src="media/equipo/tyler-mclaughlin.jpg" alt="Tyler Mclaughlin" data-cargo="CEO (Director ejecutivo)">
                             <div class="equipo-texto">
                                 <h5 class="equipo-nombre">Tyler Mclaughlin</h5>
                                 <small class="equipo-cargo">CEO (Director ejecutivo)</small>
                             </div>
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 equipo-miembro">
-                            <img class="equipo-foto" src="media/equipo/travis-brown.jpg" alt="Travis Brown">
+                            <img class="equipo-foto" src="media/equipo/travis-brown.jpg" alt="Travis Brown" data-cargo="CMO (Director de marketing)">
                             <div class="equipo-texto">
                                 <h5 class="equipo-nombre">Travis Brown</h5>
                                 <small class="equipo-cargo">CMO (Director de marketing)</small>
                             </div>
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 equipo-miembro">
-                            <img class="equipo-foto" src="media/equipo/kye-allen.jpg" alt="Kye Allen">
+                            <img class="equipo-foto" src="media/equipo/kye-allen.jpg" alt="Kye Allen" data-cargo="CCO (Directora de comunicación)">
                             <div class="equipo-texto">
                                 <h5 class="equipo-nombre">Kye Allen</h5>
                                 <small class="equipo-cargo">CCO (Directora de comunicación)</small>
                             </div>
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 equipo-miembro">
-                            <img class="equipo-foto" src="media/equipo/xavier-long.jpg" alt="Xavier Long">
+                            <img class="equipo-foto" src="media/equipo/xavier-long.jpg" alt="Xavier Long" data-cargo="CTO (Director tecnológico)">
                             <div class="equipo-texto">
                                 <h5 class="equipo-nombre">Xavier Long</h5>
                                 <small class="equipo-cargo">CTO (Director tecnológico)</small>
                             </div>
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 equipo-miembro">
-                            <img class="equipo-foto" src="media/equipo/otis-parker.jpg" alt="Otis Parker">
+                            <img class="equipo-foto" src="media/equipo/otis-parker.jpg" alt="Otis Parker" data-cargo="CFO (Director financiero)">
                             <div class="equipo-texto">
                                 <h5 class="equipo-nombre">Otis Parker</h5>
                                 <small class="equipo-cargo">CFO (Director financiero)</small>
                             </div>
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 equipo-miembro">
-                            <img class="equipo-foto" src="media/equipo/pearl-graham.jpg" alt="Pearl Graham">
+                            <img class="equipo-foto" src="media/equipo/pearl-graham.jpg" alt="Pearl Graham" data-cargo="COO (Directora de operaciones)">
                             <div class="equipo-texto">
                                 <h5 class="equipo-nombre">Pearl Graham</h5>
                                 <small class="equipo-cargo">COO (Directora de operaciones)</small>
