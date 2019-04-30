@@ -40,12 +40,16 @@
         var formulario = $('#form-contacto');
         var email_valido = comprobarFormularioEmail(formulario);
 
-        if (!email_valido || !formulario.checkValidity()) {
+        if (!email_valido || !formulario[0].checkValidity()) {
             evento.preventDefault();
             evento.stopPropagation();
             setTimeout(function() {
-                $(document.querySelectorAll(
-            "input.form-control:invalid"))[0].focus();
+                var elementosInvalidos = $(document.querySelectorAll("input.form-control:invalid"))
+                    .filter(function() {return $(this).parents('#form-contacto').length > 0;});
+
+                if (elementosInvalidos.length !== 0) {
+                    elementosInvalidos[0].focus();
+                }
             }, 100);
         }
 
