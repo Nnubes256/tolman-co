@@ -45,6 +45,14 @@ hr {
     box-shadow: 0 0 0 .2rem #ffb30080;
 }
 
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 .2rem #ffb30080;
+    background-color: #b18f40;
+    border-color: #b18f40;
+}
+
 .btn.btn-primary:not(:disabled):not(.disabled).active,
 .btn.btn-primary:not(:disabled):not(.disabled):active,
 .show > .btn.btn-primary.dropdown-toggle {
@@ -188,6 +196,7 @@ ul.navbar-nav > li.nav-item:not(.active) > a.nav-link:hover {
 
     nav.navbar > div.titulo-contenedor > button.navbar-toggler {
         border-color: #d07d2e;
+        outline: none;
     }
 
     nav.navbar > div.titulo-contenedor > button.navbar-toggler:not(.collapsed) {
@@ -357,6 +366,7 @@ footer > div.container > div.row > p {
 
 .seccion-imagen {
     display: flex;
+    min-height: 400px;
 }
 
 .seccion-imagen-unica {
@@ -406,6 +416,7 @@ footer > div.container > div.row > p {
 
 .fotografia > img {
     align-self: center;
+    width: 100%;
 }
 
 .fotografia-descripcion {
